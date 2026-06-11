@@ -1,0 +1,83 @@
+/* Este container vai ocupar a tela inteira e colocar o form no centro */
+.login-container {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center;     /* Centraliza verticalmente */
+  width: 100vw;            /* 100% da largura da tela */
+  height: 100vh;           /* 100% da altura da tela */
+  position: fixed;         /* Garante que ele fique fixo na tela toda */
+  top: 0;
+  left: 0;
+  background-color: white; /* Cor de fundo opcional */
+  z-index: 9999;           /* Garante que fique por cima de outros elementos */
+}
+
+/* Estilização do cartão do formulário */
+.login-container form {
+  width: 100%;
+  max-width: 400px;        /* Define um limite para não ficar gigante em telas grandes */
+  padding: 30px;
+  background: #ffffff;
+}
+
+input::placeholder {
+    color: #6c757d; /* Cor do placeholder */
+    font-style: italic; /* Estilo do placeholder */
+    opacity: 1; /* Garantir que a cor do placeholder seja aplicada */
+}
+
+.img {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center;     /* Centraliza verticalmente */
+}
+
+.img img {
+  width: 600px; /* Define a largura da imagem */
+}
+
+.logo {
+  display: block;
+  margin: 0 auto 20px; /* Centraliza a logo e adiciona margem inferior */
+  width: 150px; /* Define a largura da logo */
+}
+
+.form-control {
+  padding-left: 40px; /* Adiciona espaço para o ícone */
+  position: relative; /* Permite posicionar o ícone dentro do input */
+}
+/* Remove o efeito de clique duplo (foco) separado na bordinha do ícone */
+.input-group:focus-within .input-group-text,
+.input-group:focus-within .form-control {
+  border-color: #86b7fe; /* Cor padrão de foco do Bootstrap */
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.input-group .form-control:focus {
+  box-shadow: none;
+  border-color: #dee2e6; /* Mantém a borda unificada */
+}
+
+/* Faz o placeholder ficar em itálico igual ao seu print */
+.italic-placeholder::placeholder {
+  font-style: italic;
+  color: #6c757d;
+}
+
+/* Remove a linha divisória feia entre o ícone e o input */
+.custom-input-group .input-group-text,
+.custom-input-group .form-control {
+    border-color: #ced4da; /* Cor padrão da borda do Bootstrap */
+}
+
+/* Garante que o foco (quando clica no campo) mude a cor do bloco inteiro */
+.custom-input-group:focus-within .input-group-text,
+.custom-input-group:focus-within .form-control {
+    border-color: #86b7fe;
+    box-shadow: none; /* Evita sombras duplicadas */
+}
+
+/* Deixa a cor dos ícones verde igual ao seu modelo */
+.text-success {
+    color: #011f08 !important;
+}
